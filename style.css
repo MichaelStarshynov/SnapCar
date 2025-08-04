@@ -1,0 +1,329 @@
+ body {
+  margin: 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #00bfff, #00c6ff);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-btn {
+  background-color: #03045E !important;
+  color: white !important;
+  border: none !important;
+  margin: 0 10px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  box-shadow: none !important; /* убрать тень, если нужна */
+  background-image: none !important; /* убрать градиент */
+  transition: none !important; /* если нужен другой переход */
+}
+
+#nav {
+  background-color: #00B4D8;
+  padding: 1rem;
+}
+
+#content {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: rgb(0, 0, 139);
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: rgb(0, 180, 216);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(96, 96, 96);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* По умолчанию — только если нужно */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+ object-fit: cover;
+}
+
+/* Карточка автомобиля */
+.div1 {
+  width: 300px;
+  min-height: 320px;
+  background-color: white;
+  border: 2px solid darkblue;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.div1:hover {
+  transform: scale(1.02);
+}
+
+.div1 h2 {
+  font-size: 1.2rem;
+  color: #00b4d8;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.div1 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Галерея */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Поисковое поле */
+#searchInput {
+  padding: 12px 16px;
+  margin: 30px auto 40px auto;
+  width: 280px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: 0.3s ease;
+  display: block;
+}
+
+#searchInput:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+}
+
+/* Разделитель */
+hr {
+  width: 80%;
+  border: none;
+  border-top: 1px solid rgb(0, 0, 139);
+  margin: 2rem auto;
+}
+.highlight {
+  animation: flash 1s ease;
+  box-shadow: 0 0 20px 5px #00b4d8;
+}
+
+@keyframes flash {
+  0%   { box-shadow: 0 0 0 0 rgba(0,180,216, 0.7); }
+  50%  { box-shadow: 0 0 25px 10px rgba(0,180,216, 0.7); }
+  100% { box-shadow: 0 0 0 0 rgba(0,180,216, 0); }
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  margin-top: 2rem;
+}
+
+.glass-block {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  color: white;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+/* Универсальные стили */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+.filter-btn {
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-btn:hover {
+  background-color: #555;
+}
+
+.car-photo {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+strong {
+  font-weight: 700;
+  color: #001F4D; /* темно-синий */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+strong:hover {
+  color: #003366; /* чуть светлее при наведении */
+  cursor: default;
+}
+.exhibition-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.exhibition-card {
+  width: 300px;
+  background-color: white;
+  border: 2px solid darkblue;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.exhibition-card:hover {
+  transform: scale(1.03);
+}
+
+.exhibition-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.exhibition-card h2 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.exhibition-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.exhibition-btn:hover {
+  background-color: #0077b6;
+}
+.image-div {
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.image-div:hover {
+  transform: scale(1.03);
+}
+
+.image-div img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+.image-div .caption {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+}
