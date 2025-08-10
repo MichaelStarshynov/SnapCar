@@ -44,6 +44,7 @@ const cars = [  { name: "Buick Electra 225", image: "https://i.postimg.cc/PN0yGv
   { name: "Jaguar XJ", image: "https://i.postimg.cc/C1xDpJcT/IMG-20250723-170511.jpg", details:"The Jaguar XJ is a flagship luxury sedan that exudes sophistication and dynamic performance. With its sleek silhouette and refined interior, it offers a driving experience that’s both elegant and exhilarating." },
   { name: "Chevrolet Corvette C1", image: "https://i.postimg.cc/brQ2QMJn/cb5f2eea-7d73-4ec0-8390-f75c6aa14595.jpg", details:"The Chevrolet Corvette C1 is an American classic that launched a legacy of high-performance sports cars. With its iconic curves and vintage charm, it captures the spirit of 1950s automotive innovation and style." },
   { name: "BMW Z4 cabriolet", image: "https://i.postimg.cc/V6PfjNb7/d0f88d24-e34d-43fe-89cb-345b46d3d1c2.jpg", details:"The BMW Z4 is a stylish convertible that delivers precision handling and open-air excitement. With its sleek design and athletic stance, it’s built for drivers who crave both luxury and performance." },
+  { name: "Fiat Ducato Turbo D camper", image: "https://i.postimg.cc/028m1wsx/274d3117-1a9d-40a2-978c-3bc5aca557d5.jpg", details:"The Fiat Ducato Turbo D camper is a reliable travel companion built for long journeys and outdoor exploration. With its spacious interior and durable design, it offers the freedom to roam without sacrificing comfort." },
   
 ];
       
