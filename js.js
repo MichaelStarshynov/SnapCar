@@ -18,10 +18,6 @@ const pages = {
   home: {
     title: 'Welcome!',
     text: ` 
-    <div class="glass-block">
-    <h2>Update!</h2>
-    <p>We have recently updated our website to improve user experience and navigation. A brand-new <strong>Exhibition</strong> page has been added to showcase our curated collections. This page allows visitors to filter and explore exhibitions with ease. We invite you to explore the new features and enjoy the enhanced content.</p>
-    </div>
     <h3>Hello! Welcome to Snapcar — a site with real car photos from a unique private collection.</h3>
       <hr>
       <blockquote class="quote">“Every car has a story. Every photo captures a piece of history.”</blockquote>
@@ -238,36 +234,94 @@ if (typeof page !== 'undefined' && page === 'exhibition') {
     const galleryContainer = document.createElement('div');
     galleryContainer.className = 'gallery-container';
     content.appendChild(galleryContainer);
+const brandSelect = document.createElement('select');
+brandSelect.style.cssText = `
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  font-size: 16px;
+`;
 
-    function renderCards(filter = '') {
-      galleryContainer.innerHTML = '';
-      cars.forEach(car => {
-        if (car.name.toLowerCase().includes(filter)) {
-          const card = document.createElement('div');
-          card.className = 'div1';
-          card.id = car.name;
-          card.style.cursor = 'pointer';
+const defaultOption = document.createElement('option');
+defaultOption.textContent = 'Filter by brand';
+defaultOption.value = '';
+brandSelect.appendChild(defaultOption);
 
-          const title = document.createElement('h2');
-          title.textContent = car.name;
+// Получаем уникальные бренды
+const brands = [...new Set(cars.map(c => c.brand))];
+brands.forEach(brand => {
+  const option = document.createElement('option');
+  option.textContent = brand;
+  option.value = brand;
+  brandSelect.appendChild(option);
+});
 
-          const img = document.createElement('img');
-          img.src = car.image;
-          img.alt = car.name;
+content.appendChild(brandSelect);
 
-          card.appendChild(title);
-          card.appendChild(img);
-          galleryContainer.appendChild(card);
+   function renderCardsSortedByBrand(filter = '') {
+  galleryContainer.innerHTML = '';
+  const selectedBrand = brandSelect.value;
 
-          card.onclick = () => showCarDetails(car);
-        }
-      });
+  const brandGroups = {};
+  cars.forEach(car => {
+    const matchesSearch = car.name.toLowerCase().includes(filter);
+    const matchesBrand = !selectedBrand || car.brand === selectedBrand;
+
+    if (matchesSearch && matchesBrand) {
+      if (!brandGroups[car.brand]) brandGroups[car.brand] = [];
+      brandGroups[car.brand].push(car);
     }
+  });
+
+  const sortedBrands = Object.keys(brandGroups).sort();
+
+  sortedBrands.forEach(brand => {
+    const brandTitle = document.createElement('h3');
+    brandTitle.textContent = brand;
+    brandTitle.style.cssText = 'margin-top: 30px; text-align: center;';
+    galleryContainer.appendChild(brandTitle);
+
+    const brandRow = document.createElement('div');
+    brandRow.style.cssText = 'display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;';
+    galleryContainer.appendChild(brandRow);
+
+    brandGroups[brand].sort((a, b) => a.name.localeCompare(b.name)).forEach(car => {
+      const card = document.createElement('div');
+      card.className = 'div1';
+      card.id = car.name;
+      card.style.cursor = 'pointer';
+
+      const title = document.createElement('h2');
+      title.textContent = car.name;
+
+      const img = document.createElement('img');
+      img.src = car.image;
+      img.alt = car.name;
+
+      card.appendChild(title);
+      card.appendChild(img);
+      brandRow.appendChild(card);
+
+      card.onclick = () => showCarDetails(car);
+    });
+  });
+}
+
 
     searchInput.addEventListener('input', () => {
-      const filter = searchInput.value.toLowerCase().trim();
-      renderCards(filter);
-    });
+  const filter = searchInput.value.toLowerCase().trim();
+  renderCardsSortedByBrand(filter);
+});
+
+brandSelect.addEventListener('change', () => {
+  const filter = searchInput.value.toLowerCase().trim();
+  renderCardsSortedByBrand(filter);
+});
+
+renderCardsSortedByBrand();
+
+
 
     renderCards();
   }
