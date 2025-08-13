@@ -345,3 +345,22 @@ strong:hover {
   gap: 20px;
   padding: 20px;
 }
+#back-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  background-color: #d90429;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#back-btn:hover {
+  background-color: #a4031f;
+  transform: scale(1.05);
+}
