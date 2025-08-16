@@ -119,5 +119,5 @@ const cards = [
   {image: "https://i.postimg.cc/cHr9mbF9/IMG-20250330-113227.jpg", exhibition: "Street", datum: "All time"},
   {image: "https://i.postimg.cc/BbbnWjfV/0.jpg", exhibition: "Street", datum: "All time"},
   {image: "https://i.postimg.cc/fbyFjDzQ/cfc55b6b-cb66-4153-8579-95f301b7f769.jpg", exhibition: "Street", datum: "All time"},
-  
+  {image: "https://i.postimg.cc/QNHRtr7x/961ac546-7a4f-48c2-8ef1-a714a31def50.jpg", exhibition: "Street", datum: "All time"},
 ]
