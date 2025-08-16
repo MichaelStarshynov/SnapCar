@@ -51,6 +51,17 @@ const cars = [  { name: "Buick Electra 225",brand: "Buick", image: "https://i.po
   { name: "Toyota Corolla E30", brand: "Toyota",image: "https://i.postimg.cc/cLtqpQg3/IMG-20250813-154425-5467.jpg", details:"The Toyota Corolla E30, produced from 1974 to 1981, marked the third generation of the iconic Corolla series. Known for its reliability, fuel efficiency, and simple design, it became a popular choice worldwide for drivers seeking an affordable and durable compact car." },
   { name: "Chevrolet Corvette C7", brand: "Chevrolet",image: "https://i.postimg.cc/X7hmkpHY/IMG-20250813-144734.jpg", details:"The Chevrolet Corvette C7, produced from 2014 to 2019, is a seventh-generation sports car that combines aggressive styling with high performance. Equipped with a powerful V8 engine, advanced handling technologies, and a refined interior, it delivers an exhilarating driving experience while maintaining the Corvette’s iconic legacy." },
   { name: "BMW i4 V50", brand: "BMW",image: "https://i.postimg.cc/pTXsHHGS/IMG-20250813-144712.jpg", details:"The BMW i4 M50 is a high-performance all-electric Gran Coupé that combines luxury, style, and cutting-edge technology. With dual electric motors producing 544 hp, it accelerates from 0 to 100 km/h in just 3.9 seconds, offering thrilling performance while maintaining an impressive electric range of up to 510 km (WLTP). Its sleek design, advanced handling, and sustainable powertrain make it a standout choice in the electric sports sedan market." },
-  {name: "Mercedes-Benz W114", brand: "Mercedes-Benz", image: "https://i.postimg.cc/jddn4jWm/IMG-20250813-154706.jpg", details: "The Mercedes-Benz W114, produced from 1968 to 1976, is a classic executive car known for its solid build quality and timeless design. Offered in sedan and coupe versions, it combined reliability, comfort, and elegant styling, making it a popular choice among professionals and car enthusiasts alike."}
+  {name: "Mercedes-Benz W114", brand: "Mercedes-Benz", image: "https://i.postimg.cc/jddn4jWm/IMG-20250813-154706.jpg", details: "The Mercedes-Benz W114, produced from 1968 to 1976, is a classic executive car known for its solid build quality and timeless design. Offered in sedan and coupe versions, it combined reliability, comfort, and elegant styling, making it a popular choice among professionals and car enthusiasts alike."},
+
+
+
+  {name: "Mercedes-Benz W116", brand: "Mercedes-Benz", image: "https://i.postimg.cc/DwyYnnb4/ed109081-3183-48fb-a9da-5ba3178c9a5f.jpg", details: ""},
+  {name: "Volvo 760", brand: "Volvo", image: "https://i.postimg.cc/SRfDbvSG/310e6b6a-41ca-458c-a039-9c7337680deb.jpg", details: ""},
+  {name: "Volkswagen Golf Mk2", brand: "Volkswagen", image: "https://i.postimg.cc/MKtdsNr6/f0ce9e91-a9c1-449e-8d04-1e6ceafb79f7.jpg", details: ""},
+  {name: "Mercedes-Benz G-Klasse", brand: "Mercedes-Benz", image: "https://i.postimg.cc/dQ7tqCnh/5a68500a-1de3-4e14-be7a-3491b2990bc0.jpg", details: ""},
+  {name: "Citroën CX", brand: "Citroën", image: "https://i.postimg.cc/6qCk8Bym/b5babf44-91ea-428d-9e12-cfdb1dbd27dc.jpg", details: ""},
+  {name: "Mercedes-Benz E-klasse Estate", brand: "Mercedes-Benz", image: "https://i.postimg.cc/Hxwz5n9X/4fa4a312-ce54-4046-b3f7-29f8174c136a.jpg", details: ""},
+  {name: "Volvo 240", brand: "Volvo", image: "https://i.postimg.cc/SK8fFR53/3851929e-1e1f-45ff-96bb-c6dcb93b9075.jpg", details: ""},
+  
 ];
       
