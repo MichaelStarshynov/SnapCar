@@ -57,7 +57,14 @@ const cars = [  {
   { name: "Volvo 144",liter: "",number: "", brand: "Volvo",image: "https://i.postimg.cc/SxfQcV7W/IMG-20250803-140427.jpg", details:"The Fiat 850 Sport Coupe is a classic Italian gem known for its sleek design and nimble performance. With its distinctive round headlights and spirited engine, it captured the hearts of car enthusiasts in the late 1960s." },
   { name: "Mercedes-Benz TN",liter: "",number: "", brand: "Mercedes-Benz",image: "https://i.postimg.cc/WzZ8yd5P/IMG-20250723-164206.jpg", details:"The Mercedes-Benz TN, also known as the T1, was a versatile van series produced from 1977 to 1995, widely used for transport, emergency services, and camper conversions. Its robust design and reliable diesel engines made it a favorite across Europe for both commercial and recreational use." },
   { name: "Mercedes-Benz SL",liter: "",number: "",brand: "Mercedes-Benz", image: "https://i.postimg.cc/W18Q112R/IMG-20250808-184820.jpg", details:"The Mercedes-Benz SL is a legendary roadster that blends timeless elegance with cutting-edge performance. With its sleek design and powerful engine, it offers a luxurious driving experience that’s both thrilling and refined." },
-  { name: "Porsche Cayenne Custom", liter: "",number: "",brand: "Porsche", image: "https://i.postimg.cc/Rh0TG4kt/IMG-20250808-184641.jpg", details:"The Custom Porsche Cayenne transforms the iconic SUV into a bold statement of style and performance. Enhanced with unique design elements and upgraded features, it delivers a personalized driving experience that’s as powerful as it is distinctive." },
+  
+  { name: "Porsche Panamera Custom", 
+    liter: "",
+    number: "",
+    brand: "Porsche", 
+    image: "https://i.postimg.cc/Rh0TG4kt/IMG-20250808-184641.jpg", 
+    details:"The Porsche Panamera blends high-performance engineering with luxurious comfort, making it a standout in the world of premium sports sedans. With its sleek design and powerful engine options, it delivers an exhilarating driving experience without compromising everyday practicality." },
+
   { name: "Jaguar XJ", liter: "",number: "",brand: "Jaguar",image: "https://i.postimg.cc/C1xDpJcT/IMG-20250723-170511.jpg", details:"The Jaguar XJ is a flagship luxury sedan that exudes sophistication and dynamic performance. With its sleek silhouette and refined interior, it offers a driving experience that’s both elegant and exhilarating." },
   { name: "Chevrolet Corvette C1", liter: "",number: "",brand: "Chevrolet",image: "https://i.postimg.cc/brQ2QMJn/cb5f2eea-7d73-4ec0-8390-f75c6aa14595.jpg", details:"The Chevrolet Corvette C1 is an American classic that launched a legacy of high-performance sports cars. With its iconic curves and vintage charm, it captures the spirit of 1950s automotive innovation and style." },
   { name: "BMW Z4 cabriolet",liter: "2,0-3,0",number: "", brand: "BMW",image: "https://i.postimg.cc/V6PfjNb7/d0f88d24-e34d-43fe-89cb-345b46d3d1c2.jpg", details:"The BMW Z4 is a stylish convertible that delivers precision handling and open-air excitement. With its sleek design and athletic stance, it’s built for drivers who crave both luxury and performance." },
