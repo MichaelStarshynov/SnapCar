@@ -107,15 +107,15 @@ function showPage(page) {
       };
     }
 
-    function showExhibitionYearButtons() {
+    // --- Первый шаг: список выставок ---
+    function showExhibitionButtons() {
       buttonContainer.innerHTML = '';
       viewContainer.innerHTML = '';
 
-      const combos = [...new Set(cards.map(c => `${c.exhibition}|||${c.datum}`))];
+      const exhibitions = [...new Set(cards.map(c => c.exhibition))];
 
-      combos.forEach(pair => {
-        const [exhi, year] = pair.split('|||');
-        const card = cards.find(c => c.exhibition === exhi && c.datum === year);
+      exhibitions.forEach(exhi => {
+        const card = cards.find(c => c.exhibition === exhi);
 
         const div = document.createElement('div');
         div.style.cssText = `
@@ -134,7 +134,7 @@ function showPage(page) {
 
         const img = document.createElement('img');
         img.src = card.image;
-        img.alt = `${exhi} ${year}`;
+        img.alt = exhi;
         img.style.cssText = `
           width: 260px;
           height: 160px;
@@ -145,16 +145,44 @@ function showPage(page) {
         div.appendChild(img);
 
         const btn = document.createElement('button');
-        btn.textContent = `${exhi} ${year}`;
+        btn.textContent = exhi;
         styleExhibitionButton(btn);
         btn.style.width = '100%';
-        btn.onclick = () => showPhotosByYear(exhi, year);
+        btn.onclick = () => showYearButtons(exhi);
         div.appendChild(btn);
 
         buttonContainer.appendChild(div);
       });
     }
 
+    // --- Второй шаг: выбор года ---
+    function showYearButtons(exhi) {
+      buttonContainer.innerHTML = '';
+      viewContainer.innerHTML = '';
+
+      const years = [...new Set(cards.filter(c => c.exhibition === exhi).map(c => c.datum))];
+
+      const title = document.createElement('h2');
+      title.textContent = exhi;
+      title.style.textAlign = 'center';
+      viewContainer.appendChild(title);
+
+      const back = document.createElement('button');
+      back.textContent = 'Back';
+      styleExhibitionButton(back);
+      back.onclick = showExhibitionButtons;
+      viewContainer.appendChild(back);
+
+      years.forEach(year => {
+        const btn = document.createElement('button');
+        btn.textContent = year;
+        styleExhibitionButton(btn);
+        btn.onclick = () => showPhotosByYear(exhi, year);
+        viewContainer.appendChild(btn);
+      });
+    }
+
+    // --- Третий шаг: показ фото ---
     function showPhotosByYear(exhi, year) {
       buttonContainer.innerHTML = '';
       viewContainer.innerHTML = '';
@@ -168,7 +196,7 @@ function showPage(page) {
       const back = document.createElement('button');
       back.textContent = 'Back';
       styleExhibitionButton(back);
-      back.onclick = showExhibitionYearButtons;
+      back.onclick = () => showYearButtons(exhi);
       viewContainer.appendChild(back);
 
       const gallery = document.createElement('div');
@@ -209,7 +237,7 @@ function showPage(page) {
         });
     }
 
-    showExhibitionYearButtons();
+    showExhibitionButtons();
   }
 
   // === Галерея ===
@@ -330,15 +358,28 @@ function showCarDetails(car) {
   pages.details = {
     title: car.name,
     text: `
-      <div class="car-details">
-        <img src="${car.image}" alt="${car.name}" style="max-width: 300px; border-radius: 10px;" />
+      <div style="text-align:center;">
+        <img src="${car.image}" alt="${car.name}" style="width:400px; height:250px; object-fit:cover; border-radius:8px; margin-bottom:20px;">
+        <button id="backBtn" style="margin-top:20px; padding:10px 20px; border:none; border-radius:25px; background:#00bfff; color:white; cursor:pointer;">Back</button>
         <h3>${car.name}</h3>
-        <p>${car.details}</p>
-        <button class="nav-btn" onclick="showPage('gallery')">← Back to Gallery</button>
+        <p>${car.details || 'No description available.'}</p>
+        <p><strong>Number of cars produced:</strong> ${car.number || "Unknown"}.</p>
+        <p><strong>The number of liters the engine holds:</strong> ${car.liter || "Unknown"}.</p>
+        <p><strong>In which year was ${car.name} made: </strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>How many horsepower does the ${car.name} have:</strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>Max speed of ${car.name}:</strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>Where are the fabrics of ${car.brand}:</strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>What makes the ${car.name} so unique:</strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>Datum that foto is made:</strong> ${car.nothing || "Unknown"}.</p>
+        
       </div>
     `
   };
+
   showPage('details');
+
+  // Обработчик кнопки Back
+  document.getElementById('backBtn').onclick = () => showPage('gallery');
 }
 
 // ========== Запуск ==========
