@@ -16,10 +16,6 @@ const pages = {
   home: {
     title: 'Welcome!',
     text: ` 
-    <div class="glass-block">
-    <h2>Update!</h2>
-    <p>We have recently updated our website to improve user experience and navigation. A brand-new <strong>Exhibition</strong> page has been added to showcase our curated collections. This page allows visitors to filter and explore exhibitions with ease. We invite you to explore the new features and enjoy the enhanced content.</p>
-    </div>
     <h3>Hello! Welcome to Snapcar — a site with real car photos from a unique private collection.</h3>
       <hr>
       <blockquote class="quote">“Every car has a story. Every photo captures a piece of history.”</blockquote>
