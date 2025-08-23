@@ -365,12 +365,12 @@ function showCarDetails(car) {
         <p>${car.details || 'No description available.'}</p>
         <p><strong>Number of cars produced:</strong> ${car.number || "Unknown"}.</p>
         <p><strong>The number of liters the engine holds:</strong> ${car.liter || "Unknown"}.</p>
-        <p><strong>In which year was ${car.name} made: </strong> ${car.nothing || "Unknown"}.</p>
-        <p><strong>How many horsepower does the ${car.name} have:</strong> ${car.nothing || "Unknown"}.</p>
-        <p><strong>Max speed of ${car.name}:</strong> ${car.nothing || "Unknown"}.</p>
-        <p><strong>Where are the fabrics of ${car.brand}:</strong> ${car.nothing || "Unknown"}.</p>
-        <p><strong>What makes the ${car.name} so unique:</strong> ${car.nothing || "Unknown"}.</p>
-        <p><strong>Datum that foto is made:</strong> ${car.nothing || "Unknown"}.</p>
+        <p><strong>In which year was ${car.name} made: </strong> ${car.year || "Unknown"}.</p>
+        <p><strong>How many horsepower does the ${car.name} have:</strong> ${car.horsepower || "Unknown"}.</p>
+        <p><strong>Max speed of ${car.name}:</strong> ${car.maxspeed || "Unknown"} km/hour.</p>
+        <p><strong>Where are the fabrics of ${car.brand}:</strong> ${car.fabriek || "Unknown"}.</p>
+        <p><strong>What makes the ${car.name} so unique:</strong> ${car.unique || "Unknown"}.</p>
+        <p><strong>Datum that foto is made:</strong> ${car.datum || "Unknown"}.</p>
         
       </div>
     `
