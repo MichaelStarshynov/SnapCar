@@ -233,6 +233,7 @@ const cars = [  {
             details:"The Ford Mustang Fastback is an iconic American muscle car combining sleek, aerodynamic styling with powerful performance. Celebrated for its aggressive look and thrilling drive, it embodies the spirit of freedom and speed." },
   
             { name: "Citroën 2CV",
+              image: "https://i.postimg.cc/vT48QJnC/9ab5dd87-0ce2-4770-bd40-0d1add6029cc.jpg",
                liter: "2,2",
                number: "5,114,969",
                brand: "Citroën",
@@ -277,7 +278,7 @@ const cars = [  {
   
                          { name: "NG TC V8", 
                           liter: "3,5",
-                          number: "",
+                          number: "10",
                           brand: "NG",
                           image: "https://i.postimg.cc/Bj7GrqBs/1a635d4b-203c-4f97-adde-b9eff86cc4f9.png",
                            details:"The NG TC V8 is a lightweight British kit car that perfectly blends vintage roadster styling with powerful Rover V8 engines. Known for its nimble handling and thrilling performance, it offers a pure and engaging driving experience for enthusiasts." },
